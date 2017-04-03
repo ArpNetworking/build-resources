@@ -98,6 +98,10 @@
         <property name="format" value="^import junit\.framework\..*"/>
         <property name="message" value="Use JUnit v4 instead."/>
     </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="^import com\.google\.common\.base\.Optional"/>
+        <property name="message" value="Use java.util.Optional instead."/>
+    </module>
 
     <!-- Always throw propagate result -->
     <module name="RegexpSingleline">
