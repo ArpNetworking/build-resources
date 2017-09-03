@@ -137,21 +137,20 @@
 
     <module name="SuppressWarningsFilter"/>
 
-    <!-- Turn checkstyle ON and OFF for a specified code block -->
-    <module name="SuppressionCommentFilter">
-        <property name="offCommentFormat" value="CHECKSTYLE\.OFF\: ([\w\|]+)"/>
-        <property name="onCommentFormat" value="CHECKSTYLE\.ON\: ([\w\|]+)"/>
-        <property name="checkFormat" value="$1"/>
-    </module>
-
     <module name="FileLength">
         <property name="max" value="1000"/>
     </module>
 
     <module name="TreeWalker">
 
-        <module name="FileContentsHolder"/>
         <module name="SuppressWarningsHolder"/>
+    
+        <!-- Turn checkstyle ON and OFF for a specified code block -->
+        <module name="SuppressionCommentFilter">
+            <property name="offCommentFormat" value="CHECKSTYLE\.OFF\: ([\w\|]+)"/>
+            <property name="onCommentFormat" value="CHECKSTYLE\.ON\: ([\w\|]+)"/>
+            <property name="checkFormat" value="$1"/>
+        </module>
 
         <!-- Checks for imports.                     -->
         <!-- Checks for redundant import statements. -->
@@ -311,7 +310,6 @@
         <module name="EmptyBlock"/>
         <module name="LeftCurly">
             <property name="option" value="eol"/>
-            <property name="maxLineLength" value="140"/>
         </module>
         <module name="NeedBraces"/>
         <module name="RightCurly">
