@@ -117,10 +117,10 @@ for ARG in "$@"; do
   fi
 done
 if [ -z "${SPLIT_FOUND}" ]; then
-  JAVA_OPTS=""
+  #JAVA_OPTS="$JAVA_OPTS"
   APP_OPTS="${BEFORE_OPTS}"
 else
-  JAVA_OPTS="${BEFORE_OPTS}"
+  JAVA_OPTS="${JAVA_OPTS} ${BEFORE_OPTS}"
   APP_OPTS="${AFTER_OPTS}"
 fi
 
