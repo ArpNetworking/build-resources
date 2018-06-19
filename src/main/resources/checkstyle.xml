@@ -46,7 +46,7 @@
     <!-- Checks that file has the license header. -->
     <module name="Header">
         <property name="headerFile" value="${header_file}"/>
-        <property name="ignoreLines" value="2"/>
+        <property name="ignoreLines" value="1, 2"/>
         <property name="fileExtensions" value="java, xml"/>
     </module>
 
