@@ -126,6 +126,10 @@
         <property name="format" value='\.put\("[_]?class", this\.getClass\(\)'/>
         <property name="message" value="Do not specify the class field explicitly."/>
     </module>
+    <module name="RegexpSingleline">
+        <property name="format" value='final @Nullable'/>
+        <property name="message" value="Place the @Nullable annotation before the java modifiers (e.g. final, static, private, etc.)."/>
+    </module>
 
     <!-- Checks that property files contain the same keys.         -->
     <!-- See http://checkstyle.sf.net/config_misc.html#Translation -->
