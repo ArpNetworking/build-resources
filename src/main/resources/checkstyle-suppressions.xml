@@ -29,22 +29,28 @@
 
     <!-- Exclude certain checks from test code -->
     <suppress checks="JavadocVariable" files=".*Test\.java"/>
+    <suppress checks="JavadocVariable" files=".*TestPerf\.java"/>
     <suppress checks="JavadocVariable" files=".*IT\.java"/>
-    <suppress checks="JavadocVariable" files=".*PT\.java"/>
+    <suppress checks="JavadocVariable" files=".*ITPerf\.java"/>
     <suppress checks="JavadocMethod" files=".*Test\.java"/>
+    <suppress checks="JavadocMethod" files=".*TestPerf\.java"/>
     <suppress checks="JavadocMethod" files=".*IT\.java"/>
-    <suppress checks="JavadocMethod" files=".*PT\.java"/>
+    <suppress checks="JavadocMethod" files=".*ITPerf\.java"/>
     <suppress checks="EmptyBlock" files=".*Test\.java"/>
+    <suppress checks="EmptyBlock" files=".*TestPerf\.java"/>
     <suppress checks="EmptyBlock" files=".*IT\.java"/>
-    <suppress checks="EmptyBlock" files=".*PT\.java"/>
+    <suppress checks="EmptyBlock" files=".*ITPerf\.java"/>
     <suppress checks="ExecutableStatementCount" files=".*Test\.java"/>
+    <suppress checks="ExecutableStatementCount" files=".*TestPerf\.java"/>
     <suppress checks="ExecutableStatementCount" files=".*IT\.java"/>
-    <suppress checks="ExecutableStatementCount" files=".*PT\.java"/>
+    <suppress checks="ExecutableStatementCount" files=".*ITPerf\.java"/>
     <suppress checks="ThrowsCount" files=".*Test\.java"/>
+    <suppress checks="ThrowsCount" files=".*TestPerf\.java"/>
     <suppress checks="ThrowsCount" files=".*IT\.java"/>
-    <suppress checks="ThrowsCount" files=".*PT\.java"/>
+    <suppress checks="ThrowsCount" files=".*ITPerf\.java"/>
     <suppress checks="FileLength" files=".*Test\.java"/>
+    <suppress checks="FileLength" files=".*TestPerf\.java"/>
     <suppress checks="FileLength" files=".*IT\.java"/>
-    <suppress checks="FileLength" files=".*PT\.java"/>
+    <suppress checks="FileLength" files=".*ITPerf\.java"/>
 
 </suppressions>
