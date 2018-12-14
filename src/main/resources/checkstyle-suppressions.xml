@@ -28,6 +28,8 @@
     <suppress checks="." files=".*[\\/]?generated-sources[\\/].*"/>
 
     <!-- Exclude certain checks from test code -->
+    <suppress checks="AvoidStaticImport" files=".*Test\.java"/>
+    <suppress checks="AvoidStaticImport" files=".*TestPerf\.java"/>
     <suppress checks="JavadocVariable" files=".*Test\.java"/>
     <suppress checks="JavadocVariable" files=".*TestPerf\.java"/>
     <suppress checks="JavadocVariable" files=".*IT\.java"/>
