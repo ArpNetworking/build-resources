@@ -180,7 +180,8 @@
             <property name="groups" value="*,/^javax?\./"/>
             <!-- This ensures that static imports go first. -->
             <property name="separated" value="true"/>
-            <property name="option" value="top"/>
+            <property name="option" value="bottom"/>
+            <property name="sortStaticImportsAlphabetically" value="true"/>
             <property name="tokens" value="STATIC_IMPORT, IMPORT"/>
         </module>
 
