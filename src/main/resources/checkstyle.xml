@@ -144,6 +144,9 @@
     <module name="SuppressionFilter">
         <property name="file" value="${suppressions_file}"/>
     </module>
+    <module name="SuppressionFilter">
+        <property name="file" value="${extra_suppressions_file}"/>
+    </module>
 
     <module name="SuppressWarningsFilter"/>
 
