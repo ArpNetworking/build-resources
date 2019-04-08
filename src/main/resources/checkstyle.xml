@@ -178,7 +178,7 @@
         <module name="ImportOrder">
             <property name="severity" value="error"/>
             <property name="groups" value="*,/^javax?\./"/>
-            <!-- This ensures that static imports go first. -->
+            <!-- This ensures that static imports go last. -->
             <property name="separated" value="true"/>
             <property name="option" value="bottom"/>
             <property name="sortStaticImportsAlphabetically" value="true"/>
