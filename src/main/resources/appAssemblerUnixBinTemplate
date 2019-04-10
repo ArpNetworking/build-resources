@@ -105,15 +105,23 @@ AFTER_OPTS=""
 SPLIT_FOUND=
 for ARG in "$@"; do
   VALUE=
-  eval VALUE="${ARG}"
+  eval "VALUE=\"${ARG}\""
+  if [ "${ARG}" = "${VALUE}" ]; then
+    case "${VALUE}" in
+      *\'*)
+       VALUE=`printf "%s" "$VALUE" | sed "s/'/'\"'\"'/g"`
+       ;;
+    *) : ;;
+    esac
+  fi
   if [ -z "${SPLIT_FOUND}" ]; then
     if [ "${VALUE}" = "--" ]; then
       SPLIT_FOUND="true"
     else
-      BEFORE_OPTS="${BEFORE_OPTS} '${VALUE}'"
+      BEFORE_OPTS="${BEFORE_OPTS} ${VALUE}"
     fi
   else
-    AFTER_OPTS="${AFTER_OPTS} '${VALUE}'"
+    AFTER_OPTS="${AFTER_OPTS} ${VALUE}"
   fi
 done
 if [ -z "${SPLIT_FOUND}" ]; then
