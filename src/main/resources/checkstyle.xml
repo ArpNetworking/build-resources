@@ -83,8 +83,8 @@
 
     <!-- Checks that <code> tags are not used -->
     <module name="RegexpSingleline">
-        <property name="format" value="((//)|(\*)).*<code>.*</code>"/>
-        <property name="message" value='Use {@code ...} or {@link ...} instead of <code>...</code>"'/>
+        <property name="format" value="((//)|(\*)).*&lt;code&gt;.*&lt;/code&gt;"/>
+        <property name="message" value='Use {@code ...} or {@link ...} instead of &lt;code&gt;...&lt;/code&gt;"'/>
     </module>
 
     <!-- Forbid shaded packages -->
