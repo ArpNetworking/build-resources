@@ -81,6 +81,12 @@
         <property name="message" value='All @author tags should contain first and last name with email. e.g. "@author First Last (flast at example dot com)"'/>
     </module>
 
+    <!-- Checks that <code> tags are not used -->
+    <module name="RegexpSingleline">
+        <property name="format" value="((//)|(\*)).*&lt;code&gt;.*&lt;/code&gt;"/>
+        <property name="message" value='Use {@code ...} or {@link ...} instead of &lt;code&gt;...&lt;/code&gt;"'/>
+    </module>
+
     <!-- Forbid shaded packages -->
     <module name="RegexpSingleline">
         <property name="format" value="^import com\.arpnetworking\.metrics\.com\..*"/>
