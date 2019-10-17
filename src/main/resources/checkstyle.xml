@@ -84,7 +84,7 @@
     <!-- Checks that <code> tags are not used -->
     <module name="RegexpSingleline">
         <property name="format" value="((//)|(\*)).*&lt;code&gt;.*&lt;/code&gt;"/>
-        <property name="message" value='Use {@code ...} or {@link ...} instead of &lt;code&gt;...&lt;/code&gt;"'/>
+        <property name="message" value='Use {&lt;at&gt;code ...} or {&lt;at&gt;link ...} instead of &lt;code&gt;...&lt;/code&gt;"'/>
     </module>
 
     <!-- Forbid shaded packages -->
@@ -156,8 +156,18 @@
 
     <module name="SuppressWarningsFilter"/>
 
+    <module name="SuppressWithPlainTextCommentFilter">
+        <property name="offCommentFormat" value="CHECKSTYLE\.OFF\: ([\w\|]+)"/>
+        <property name="onCommentFormat" value="CHECKSTYLE\.ON\: ([\w\|]+)"/>
+        <property name="checkFormat" value="$1"/>
+    </module>
+
     <module name="FileLength">
         <property name="max" value="1000"/>
+    </module>
+
+    <module name="LineLength">
+        <property name="max" value="140"/>
     </module>
     
     <!-- Requires a package-info.java file -->
@@ -199,11 +209,17 @@
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
         <module name="JavadocMethod">
             <property name="scope" value="protected"/>
+        </module>
+        <module name="MissingJavadocMethod">
+            <property name="scope" value="protected"/>
             <property name="allowMissingPropertyJavadoc" value="true"/>
         </module>
         <module name="JavadocType">
             <property name="scope" value="protected"/>
             <property name="authorFormat" value="\S"/>
+        </module>
+        <module name="MissingJavadocType">
+            <property name="scope" value="protected"/>
         </module>
         <module name="JavadocVariable">
             <property name="scope" value="public"/>
@@ -257,9 +273,6 @@
         </module>
         <module name="ExecutableStatementCount">
             <property name="max" value="30"/>
-        </module>
-        <module name="LineLength">
-            <property name="max" value="140"/>
         </module>
         <module name="MethodCount">
             <property name="maxTotal" value="100"/>
