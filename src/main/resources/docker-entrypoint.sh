@@ -188,10 +188,14 @@ ${os}_create_user_group "${cfg_user}" "${cfg_uid}" "${cfg_gid}"
 
 # Modify the ownership of the specified directories
 eval "set -- ${cfg_directories}"
+# Disable fail on error so that this becomes a best effort step
+set +e
 for cfg_directory in "$@"; do
   log_out "Setting ownership of: ${cfg_directory}"
   find "${cfg_directory}" \! -user "${cfg_user}" -exec chown "${cfg_user}:${cfg_user}" '{}' +
 done
+# Re-enable fail on error
+set -e
 
 # Execute the provided command as the specified user
 eval "set -- ${command_args}"
