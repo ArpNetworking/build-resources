@@ -32,7 +32,7 @@ pipeline {
       when { buildingTag(); not { changeRequest() }  }
       steps {
         script {
-          target = "deploy -P release -P rpm --settings settings.xml"
+          target = "deploy -P release --settings settings.xml"
         }
         sh 'gpg --batch --import arpnetworking.key'
       }
@@ -43,7 +43,7 @@ pipeline {
             usernamePassword(credentialsId: 'jenkins-ossrh', usernameVariable: 'OSSRH_USER', passwordVariable: 'OSSRH_PASS'),
             string(credentialsId: 'jenkins-gpg', variable: 'GPG_PASS')]) {
           withMaven {
-            sh "./jdk-wrapper.sh ./mvnw $target -P rpm -U -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Ddocker.verbose=true"
+            sh "./jdk-wrapper.sh ./mvnw $target -U -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Ddocker.verbose=true"
           }
         }
       }
