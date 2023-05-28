@@ -52,4 +52,9 @@
          </Or>
      </Match>
 
+     <Match>
+         <Or>
+            <Source name="~.*generated.*" />
+         </Or>
+     </Match>
 </FindBugsFilter>
