@@ -29,7 +29,7 @@
   <name>Build Resources</name>
   <description>Common build resources used to build ArpNetworking projects.</description>
   <url>https://github.com/arpnetworking/build-resources</url>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.0.2-SNAPSHOT</version>
 
   <licenses>
     <license>
