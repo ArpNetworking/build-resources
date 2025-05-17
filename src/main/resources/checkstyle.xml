@@ -446,10 +446,10 @@
         </module>
         <module name="UnusedImports"/>
 
-	<!-- The JDK has added a couple of non-standard tags that are now common -->
-        <module name="SuppressionSingleFilter">
-            <property name="message" value="Unknown tag '(implNote|implSpec|apiNote)'\."/>
-        </module>
+    </module>
+    <!-- The JDK has added a couple of non-standard tags that are now common -->
+    <module name="SuppressionSingleFilter">
+        <property name="message" value="Unknown tag '(implNote|implSpec|apiNote)'\."/>
     </module>
 
 </module>
